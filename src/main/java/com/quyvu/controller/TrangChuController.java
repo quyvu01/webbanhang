@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -21,11 +22,12 @@ public class TrangChuController {
 	SessionFactory sessionFactory;
 	@GetMapping
 	@Transactional
-	public String Default() {
+	public String Default(ModelMap modelMap) {
 		Session session=sessionFactory.getCurrentSession();
 		String sql="from NhanVien";
 		List<NhanVien> listNhanVien =  session.createQuery(sql).getResultList();
-		listNhanVien.forEach(nv->System.out.println("Name is: "+nv.getTenNhanVien()));
+		listNhanVien.forEach(nv->System.out.println("Name is: "+nv.getTenNhanVien() + " Age is: "+nv.getTuoi()));
+		modelMap.addAttribute("listNhaVien", listNhanVien);
 		return "trangchu";
 	}
 

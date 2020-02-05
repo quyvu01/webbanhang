@@ -12,8 +12,27 @@
 <title>Home page</title>
 </head>
 <body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div id="cot1" class="col-md-3" data-text="Hello Baby">
+				Day la Cot 1
+			</div>
+			<div class="col-md-3">
+
+			</div>
+			<div class="col-md-3">
+
+			</div>
+			<div class="col-md-3">
+
+			</div>
+		</div>
+	</div>
 	<a href="login">Login Here!</a>
 	<br />
-	
+
+
+	<jsp:include page="footer.jsp"/>
 </body>
 </html>

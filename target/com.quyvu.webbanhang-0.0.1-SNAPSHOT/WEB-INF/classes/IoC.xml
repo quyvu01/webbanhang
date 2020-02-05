@@ -15,7 +15,7 @@
 
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource"/>
-		<property name="packagesToScan" value="com.quyvu.entity"/>
+		<property name="packagesToScan" value="com.quyvu.entity"/> <!-- Scan class-->
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect"> org.hibernate.dialect.MySQLDialect</prop>

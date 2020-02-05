@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="com.quyvu.webbanhang:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>com.quyvu.webbanhang</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="com.quyvu.webbanhang-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="com.quyvu.webbanhang:war exploded" />
+    </root>
+  </artifact>
+</component>

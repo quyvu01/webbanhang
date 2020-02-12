@@ -1,7 +1,8 @@
 package com.quyvu.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 @Entity(name = "NhanVien")
 public class NhanVien {
@@ -10,6 +11,25 @@ public class NhanVien {
 	String tenNhanVien;
 	int tuoi;
 
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn
+	Set<SanPham> sanPhams;
+
+	public Set<SanPham> getSanPhams() {
+		return sanPhams;
+	}
+
+	public void setSanPhams(Set<SanPham> sanPhams) {
+		this.sanPhams = sanPhams;
+	}
+
+	public NhanVien(String tenNhanVien, int tuoi){
+		this.tenNhanVien=tenNhanVien;
+		this.tuoi=tuoi;
+	}
+	public  NhanVien(){
+
+	}
 	public int getIdNhanVien() {
 		return idNhanVien;
 	}

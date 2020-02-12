@@ -1,4 +1,5 @@
 com\quyvu\controller\DangNhapController.class
 com\quyvu\controller\TrangChuController.class
 com\quyvu\entity\NhanVien.class
+com\quyvu\entity\SanPham.class
 com\quyvu\entity\DangNhap.class

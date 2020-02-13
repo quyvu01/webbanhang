@@ -5,7 +5,6 @@ import com.quyvu.entity.NhanVien;
 import com.quyvu.entity.SanPham;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.EnhancedProjection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,8 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.transaction.Transactional;
-import java.awt.image.SampleModel;
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 @Controller
@@ -25,31 +25,36 @@ public class TrangChuController {
 
 	@Autowired
 	SessionFactory sessionFactory;
+	
 	@GetMapping
 	@Transactional
 	public String Default(ModelMap modelMap) {
 		Session session=sessionFactory.getCurrentSession();
+		
+		SanPham sanPham1=new SanPham();
+		sanPham1.setTenSanPham("Ga ran nua con");
+		sanPham1.setGiaTien("150.000");
+		
+		SanPham sanPham2=new SanPham();
+		sanPham1.setTenSanPham("Ga ran ca con");
+		sanPham1.setGiaTien("300.000");
+		
+		SanPham sanPham3=new SanPham();
+		sanPham1.setTenSanPham("Ga ran 2 con");
+		sanPham1.setGiaTien("450.000");
 
-		NhanVien nv=new NhanVien();
-		nv.setTenNhanVien("KinaSuKi Koto");
-		nv.setTuoi(50);
-
-		SanPham sp1=new SanPham();
-		sp1.setTenSanPham("Com rang dua bo");
-		sp1.setGiaTien("50.000");
-
-		SanPham sp2=new SanPham();
-		sp2.setTenSanPham("Pho bo");
-		sp2.setGiaTien("35.000");
-
-//		Set<SanPham> sanPhams=new HashSet<>();
-//		sanPhams.add(sp1);
-//		sanPhams.add(sp2);
-//		nv.setSanPhams(sanPhams);
-
-		((List<SanPham>)session.createQuery("from SanPham ").list()).forEach(p->System.out.println(p.getTenSanPham()));
-		session.save(nv);
-
+		Set<SanPham> sanPhamSet=new HashSet<>();
+		sanPhamSet.add(sanPham1);
+		sanPhamSet.add(sanPham2);
+		sanPhamSet.add(sanPham3);
+		
+		NhanVien nhanVien=session.get(NhanVien.class, 4);
+		//nhanVien.setSanPhamSet(sanPhamSet);
+		
+		((List<NhanVien>)session.createQuery("from NhanVien ").list()).forEach(p->System.out.println(p.getTenNhanVien()));
+		
+		session.save(nhanVien);
+		
 		return "trangchu";
 	}
 

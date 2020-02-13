@@ -1,33 +1,32 @@
 package com.quyvu.entity;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity(name = "NhanVien")
 public class NhanVien {
 	@Id
 	int idNhanVien;
+	
 	String tenNhanVien;
 	int tuoi;
+	
+	@OneToMany
+	@JoinColumn(name="idNhanVien")
+	Set<SanPham> sanPhamSet;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn
-	Set<SanPham> sanPhams;
-
-	public Set<SanPham> getSanPhams() {
-		return sanPhams;
+	public void setSanPhamSet(Set<SanPham> sanPhamSet) {
+		this.sanPhamSet = sanPhamSet;
 	}
-
-	public void setSanPhams(Set<SanPham> sanPhams) {
-		this.sanPhams = sanPhams;
+	public Set<SanPham> getSanPhamSet(){
+		return sanPhamSet;
 	}
 
 	public NhanVien(String tenNhanVien, int tuoi){
 		this.tenNhanVien=tenNhanVien;
 		this.tuoi=tuoi;
 	}
-	public  NhanVien(){
+	public NhanVien(){
 
 	}
 	public int getIdNhanVien() {

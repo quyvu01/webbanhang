@@ -1,6 +1,5 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
-<%@page import="com.quyvu.entity.NhanVien"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -33,9 +32,15 @@
 					</li>
 				</ul>
 				<ul class=" nav navbar-right">
-					<li><a class="nav-link" href="#">ĐĂNG NHẬP</a> </li>
-					<li><a class="nav-link" href="#">ĐĂNG KÝ</a> </li>
-					<li><a class="nav-link" href="#"><img class="icon-size" src="<c:url value="/resource/Image/icon_cash.png"/> "></a></li>
+					<li>
+						<c:if test="${email == null}">
+							<a class="nav-link" href="login">ĐĂNG NHẬP</a>
+						</c:if>
+						<c:if test="${email != null}">
+							<a class="nav-link circle-loged-in" href="#">${firt-Char}</a>
+						</c:if>
+					</li>
+					<li><a style="margin-top: -5px" class="nav-link" href="#"><img class="icon-size" src="<c:url value="/resource/Image/icon_cash.png"/> "></a></li>
 				</ul>
 			</div>
 		</nav>

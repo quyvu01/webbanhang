@@ -1,50 +1,101 @@
 package com.quyvu.entity;
 
 import javax.persistence.*;
-import java.util.Set;
 
-@Entity(name = "NhanVien")
+@Entity(name="NhanVien")
 public class NhanVien {
-	@Id
-	int idNhanVien;
-	
-	String tenNhanVien;
-	int tuoi;
-	
-	@OneToMany
-	@JoinColumn(name="idNhanVien")
-	Set<SanPham> sanPhamSet;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int manhanvien;
+    String hoten;
+    String diachi;
+    boolean gioitinh;
+    String cmnd;
+    long sodt;
+    String email;
+    String tendangnhap;
+    String matkhau;
 
-	public void setSanPhamSet(Set<SanPham> sanPhamSet) {
-		this.sanPhamSet = sanPhamSet;
-	}
-	public Set<SanPham> getSanPhamSet(){
-		return sanPhamSet;
-	}
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="machucvu")
+    ChucVu chucVu;
 
-	public NhanVien(String tenNhanVien, int tuoi){
-		this.tenNhanVien=tenNhanVien;
-		this.tuoi=tuoi;
-	}
-	public NhanVien(){
+    public ChucVu getChucVu() {
+        return chucVu;
+    }
 
-	}
-	public int getIdNhanVien() {
-		return idNhanVien;
-	}
-	public void setIdNhanVien(int idNhanVien) {
-		this.idNhanVien = idNhanVien;
-	}
-	public String getTenNhanVien() {
-		return tenNhanVien;
-	}
-	public void setTenNhanVien(String tenNhanVien) {
-		this.tenNhanVien = tenNhanVien;
-	}
-	public int getTuoi() {
-		return tuoi;
-	}
-	public void setTuoi(int tuoi) {
-		this.tuoi = tuoi;
-	}
+    public void setChucVu(ChucVu chucVu) {
+        this.chucVu = chucVu;
+    }
+
+    public String getMatkhau() {
+        return matkhau;
+    }
+
+    public void setMatkhau(String matkhau) {
+        this.matkhau = matkhau;
+    }
+
+    public int getManhanvien() {
+        return manhanvien;
+    }
+
+    public void setManhanvien(int manhanvien) {
+        this.manhanvien = manhanvien;
+    }
+
+    public String getHoten() {
+        return hoten;
+    }
+
+    public void setHoten(String hoten) {
+        this.hoten = hoten;
+    }
+
+    public String getDiachi() {
+        return diachi;
+    }
+
+    public void setDiachi(String diachi) {
+        this.diachi = diachi;
+    }
+
+    public boolean isGioitinh() {
+        return gioitinh;
+    }
+
+    public void setGioitinh(boolean gioitinh) {
+        this.gioitinh = gioitinh;
+    }
+
+    public String getCmnd() {
+        return cmnd;
+    }
+
+    public void setCmnd(String cmnd) {
+        this.cmnd = cmnd;
+    }
+
+    public long getSodt() {
+        return sodt;
+    }
+
+    public void setSodt(long sodt) {
+        this.sodt = sodt;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getTendangnhap() {
+        return tendangnhap;
+    }
+
+    public void setTendangnhap(String tendangnhap) {
+        this.tendangnhap = tendangnhap;
+    }
 }

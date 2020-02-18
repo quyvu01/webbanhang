@@ -1,57 +1,93 @@
 package com.quyvu.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name="SanPham")
 public class SanPham {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idSanPham;
-    String tenSanPham;
-    String giaTien;
-//    int idNhanVien;
-//    public void setIdNhanVien(int idNhanVien){
-//        this.idNhanVien=idNhanVien;
-//    }
-//    public int getIdNhanVien(){
-//        return idNhanVien;
-//    }
+    int masanpham;
+    String tensanpham;
+    String giatien;
+    String mota;
+    String hinhsanpham;
     
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="idNhanVien")
-    NhanVien nhanVien;
+    @JoinColumn(name="madanhmuc")
+    DanhMucSanPham danhMucSanPham;
+    
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="masanpham")
+    Set<ChiTietSanPham> setChiTietSanPham;
 
-    public NhanVien getNhanVien() {
-        return nhanVien;
+    @ManyToMany
+    @JoinTable(name="chitietkhuyenmai",
+            joinColumns = {@JoinColumn(name="masanpham", referencedColumnName = "masanpham")},
+            inverseJoinColumns = {@JoinColumn(name="makhuyenmai", referencedColumnName = "makhuyenmai")})
+    Set<KhuyenMai> danhSachKhuyenMai;
+
+    public Set<KhuyenMai> getDanhSachKhuyenMai() {
+        return danhSachKhuyenMai;
     }
 
-    public void setNhanVien(NhanVien nhanVien) {
-        this.nhanVien = nhanVien;
+    public void setDanhSachKhuyenMai(Set<KhuyenMai> danhSachKhuyenMai) {
+        this.danhSachKhuyenMai = danhSachKhuyenMai;
     }
 
-
-    public int getIdSanPham() {
-        return idSanPham;
+    public Set<ChiTietSanPham> getSetChiTietSanPham() {
+        return setChiTietSanPham;
     }
 
-    public void setIdSanPham(int idSanPham) {
-        this.idSanPham = idSanPham;
+    public void setSetChiTietSanPham(Set<ChiTietSanPham> setChiTietSanPham) {
+        this.setChiTietSanPham = setChiTietSanPham;
     }
 
-    public String getTenSanPham() {
-        return tenSanPham;
+    public int getMasanpham() {
+        return masanpham;
     }
 
-    public void setTenSanPham(String tenSanPham) {
-        this.tenSanPham = tenSanPham;
+    public void setMasanpham(int masanpham) {
+        this.masanpham = masanpham;
     }
 
-    public String getGiaTien() {
-        return giaTien;
+    public String getTensanpham() {
+        return tensanpham;
     }
 
-    public void setGiaTien(String giaTien) {
-        this.giaTien = giaTien;
+    public void setTensanpham(String tensanpham) {
+        this.tensanpham = tensanpham;
     }
 
+    public String getGiatien() {
+        return giatien;
+    }
+
+    public void setGiatien(String giatien) {
+        this.giatien = giatien;
+    }
+
+    public String getMota() {
+        return mota;
+    }
+
+    public void setMota(String mota) {
+        this.mota = mota;
+    }
+
+    public String getHinhsanpham() {
+        return hinhsanpham;
+    }
+
+    public void setHinhsanpham(String hinhsanpham) {
+        this.hinhsanpham = hinhsanpham;
+    }
+
+    public DanhMucSanPham getDanhMucSanPham() {
+        return danhMucSanPham;
+    }
+
+    public void setDanhMucSanPham(DanhMucSanPham danhMucSanPham) {
+        this.danhMucSanPham = danhMucSanPham;
+    }
 }

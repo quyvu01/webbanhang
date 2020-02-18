@@ -1,5 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="com.quyvu.entity.DangNhap"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,7 +6,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Log In</title>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="header.jsp"/>
+<jsp:include page="footer.jsp"/>
 </head>
 <body id="body-login">
 	<div id="body-flex-login">
@@ -41,14 +41,47 @@
 			</div>
 			<div id="container-login-right">
 				<div id="header-top-right" class="header-login">
-					<span class="actived">Đăng nhập</span>/<span>Đăng ký</span>
+					<span id="btn-login" class="actived">Đăng nhập</span>/<span id="btn-signup">Đăng ký</span>
 				</div>
 				<div id="container-center-right">
-					<form action="">
-						<input class="input-icon-email" type="text" placeholder="Email"> <br/>
-						<input class="input-icon-password" type="password" placeholder="Mật khẩu"> <br/>
-						<input class="material-primary-button" type="submit" value="ĐĂNG NHẬP">
-					</form>
+					<div id="container-login-pre">
+						<input id="ipemail-login" name="email" class="input-icon-email" type="text" placeholder="Email"> <br/>
+						<input id="ippassword-login" name="matkhau" class="input-icon-password" type="password" placeholder="Mật khẩu"> <br/>
+						<button class="material-primary-button" id="btnDangNhap">ĐĂNG NHẬP</button>
+					</div>
+					
+					<div id="container-signup-pre" style="display: none">
+						<form method="post" action="">
+							<input id="ipemail-signip" name="email" class="input-icon-email" type="text" placeholder="Email"> <br/>
+							<input id="ippassword-signup" name="matkhau" class="input-icon-password" type="password" placeholder="Mật khẩu"> <br/>
+							<input id="ipre-password-signup" name="nhaplaimatkhau" class="input-icon-password" type="password" placeholder="Nhập lại mật khẩu"> <br/>
+							<button class="material-primary-button" id="btnDangKy">ĐĂNG KÝ</button>
+						</form>
+					</div>
+					<div>
+						<span>
+							<c:if test="${Status == 2002}">
+								Yêu cầu tên đăng nhập và mật khẩu!
+							</c:if>
+							<c:if test="${Status == 2003}">
+								Vui lòng nhập mật khẩu nhập lại giống mật khẩu!
+							</c:if>
+							<c:if test="${Status == 2001}">
+								Đăng ký thành công!
+							</c:if>
+							<c:if test="${Status == 2004}">
+								Mật khẩu không đúng định dạng, vui lòng kiểm tra lại!
+							</c:if>
+							<c:if test="${Status == 2006}">
+								Tên đăng ký đã tồn tại!
+							</c:if>
+						</span>
+						<span id="hiden-span" hidden="hidden">
+							<c:if test="${Status != 2001}">
+								True
+							</c:if>
+						</span>
+					</div>
 				</div>
 				<div id="container-social-login">
 				<img alt="login_facebook" src='<c:url value="/resource/Image/icon_facebook.png" />'
@@ -59,7 +92,6 @@
 			</div>
 		</div>
 	</div>
-
 </body>
 
 </html>

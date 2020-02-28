@@ -3,7 +3,7 @@ package com.quyvu.entity;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity(name="danhmucsanpham")
+@Entity(name="DanhMucSanPham")
 public class DanhMucSanPham {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,7 +11,7 @@ public class DanhMucSanPham {
     String tendanhmuc;
     String hinhdanhmuc;
     
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="madanhmuc")
     Set<SanPham> danhSachSanPham;
 

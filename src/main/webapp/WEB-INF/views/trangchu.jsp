@@ -14,7 +14,7 @@
 	<!-- Header-->
 	<div id="header" class="container-fluid">
 		<nav class="navbar navbar-expand-lg navbar-light header_background">
-			<a class="navbar-brand" href="#"><img src="<c:url value="/resource/Image/icon_logo.png"/>"/></a>
+			<a class="navbar-brand" href="<c:url value="/"/>"><img src="<c:url value="/resource/Image/icon_logo.png"/>"/></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -22,25 +22,42 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto navbar-nav">
 					<li class="nav-item active">
-						<a class="nav-link active" href="#">TRANG CHỦ</a>
+						<a class="nav-link active" href="<c:url value="/"/>">TRANG CHỦ</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">DỊCH VỤ</a>
+						<a class="nav-link" href="<c:url value="/"/>">DỊCH VỤ</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">LIÊN HỆ</a>
+						<a class="nav-link" id="scroll-end" style="cursor: pointer">LIÊN HỆ</a>
+					</li>
+					<li class="dropdown product-List">
+						<a class="dropdown-toggle" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							SẢN PHẨM
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<c:forEach var="item" items="${danhmuc}">
+								<li><a href="<c:url value="/sanpham/${item.madanhmuc}"/>">${item.tendanhmuc}</a></li>
+							</c:forEach>
+						</ul>
 					</li>
 				</ul>
 				<ul class=" nav navbar-right">
 					<li>
 						<c:if test="${email == null}">
-							<a class="nav-link" href="login">ĐĂNG NHẬP</a>
+							<a class="nav-link" href="<c:url value="/login"/> ">ĐĂNG NHẬP</a>
 						</c:if>
 						<c:if test="${email != null}">
 							<a class="nav-link circle-loged-in" href="#">${firt-Char}</a>
 						</c:if>
 					</li>
-					<li><a style="margin-top: -5px" class="nav-link" href="#"><img class="icon-size" src="<c:url value="/resource/Image/icon_cash.png"/> "></a></li>
+					<li style="display: flex"><a style="margin-top: -5px" class="nav-link" href="<c:url value="/giohang"/>"><img class="icon-size" src="<c:url value="/resource/Image/icon_cash.png"/> "></a>
+						<c:if test="${countSanpham !=0}">
+							<div id="product-Count"><span class="product-Count">${countSanpham}</span></div>
+						</c:if>
+						<c:if test="${countSanpham ==0}">
+							<div style="display: none" id="product-Count"><span class="product-Count">${countSanpham}</span></div>
+						</c:if>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -75,91 +92,16 @@
 	<div id="titleProduct" class="container">
 		<span>SẢN PHẨM HOT</span>
 	</div>
-	<div id="img-sample-size" class="row">
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
+	<div  class=" row img-sample-size">
+		<c:forEach var="sanpham" items="${firstProducts}">
+			<a href="<c:url value="/chitiet/${sanpham.masanpham}"/>" class="col-md-3 col-sm-6">
+			<div class="product wow zoomIn">
+				<img alt="${sanpham.tensanpham}" src="<c:url value="/resource/Image/Product/${sanpham.hinhsanpham}.jpg" />"/>
+				<span>${sanpham.tensanpham}</span><br/>
+				<span class="produc-price">Giá: ${sanpham.giatien} đ</span>
 			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<div class="product">
-				<img alt="hinh1" src="<c:url value="/resource/Image/dress_sample.jpg" />"/>
-				<span>Tên sản phẩm</span><br/>
-				<span class="produc-price">Giá: 150.000đ</span>
-			</div>
-		</div>
+			</a>
+		</c:forEach>		
 	</div>
 	<!--Footer-->
 	<div id="footer-special" class="container-fluid">
@@ -172,7 +114,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-4 col-lg-4">
+				<div class="col-md-4 col-lg-4" id="page-end">
 					<span class="footer-general">LIÊN HỆ</span><br/>
 					<div class="footer-description">
 						<span>Số 8, Đường Tôn Thất Thyết,Quận Từ Liêm,T.P Hà Nội</span><br/>

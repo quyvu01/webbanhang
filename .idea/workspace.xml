@@ -7,44 +7,145 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3172225-b2b0-42ae-93cb-9f860d4f5ce6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/ApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/dao/NhanVienDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/daoimp/NhanVienImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietHoaDon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietHoaDonId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietSanPham.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChucVu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/DanhMucSanPham.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/HoaDon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/KhuyenMai.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/MauSanPham.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/Size.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/service/NhanVienService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/ChiTietController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/DashBoardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/GioHangController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/SanPhamController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/ThemSanPhamController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/dao/ChiTietHoaDonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/dao/DanhMucSanPhamDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/dao/HoaDonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/dao/SanPhamDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/daoimp/ChiTietHoaDonImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/daoimp/DanhMucSanPhamImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/daoimp/HoaDonImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/daoimp/SanPhamImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/GioHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/service/ChiTietHoaDonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/service/DanhMucSanPhamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/service/HoaDonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/service/SanPhamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dashboard.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/giohang.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sanpham.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/themsanpham.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/00115430.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012413.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012414.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012415.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012416.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012417.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012512.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012650.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012655.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012658.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012738.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0012847.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0013120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/0013542.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/TD R02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/TD ST01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/TN L01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/TN N01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/TN O01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/Product/TN O02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/closew.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/cross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/g3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/g4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/g5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/g6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/g7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/g8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/g9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/grid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/icon_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/in9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/leftw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/phon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/right_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/rightw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/tick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/Image/tick1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/jquery.basictable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/jquery.jqcandlestick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/jquery.nicescroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/lightbox-plus-jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/monthly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/morris.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/raphael-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/basictable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/icon-font.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/jqcandlestick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/lightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/monthly.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/morris.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css/table-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/DangNhapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/DangNhapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/TrangChuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/TrangChuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/DangNhap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/NhanVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietHoaDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietHoaDon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietHoaDonId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietHoaDonId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/DanhMucSanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/DanhMucSanPham.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/HoaDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/HoaDon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/SanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/SanPham.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/IoC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/IoC.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chitiet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chitiet.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/trangchu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/trangchu.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/JS/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/Styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IoC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IoC.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/ApiController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/DangNhapController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/DangNhapController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/TrangChuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/TrangChuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/DangNhap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/NhanVien.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/NhanVien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/dao/NhanVienDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/dao/NhanVienDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietHoaDon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietHoaDon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/DanhMucSanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/DanhMucSanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/HoaDon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/HoaDon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/SanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/SanPham.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/IoC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/IoC.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/ApiController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/DangNhapController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/DangNhapController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/TrangChuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/TrangChuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/DangNhap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/NhanVien.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/NhanVien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/dao/NhanVienDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/dao/NhanVienDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/ChiTietHoaDon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/ChiTietHoaDon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/DanhMucSanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/DanhMucSanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/HoaDon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/HoaDon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/SanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/SanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/views/chitiet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/views/chitiet.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/views/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/views/trangchu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/views/trangchu.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/resource/JS/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/resource/JS/custom.js" afterDir="false" />
@@ -76,6 +177,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -113,7 +215,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource/JS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.4.1/css" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
@@ -121,10 +223,11 @@
       <recent name="E:\Self-studying\Java_Learning\Practice\WebBanHang\src\main\webapp\resource" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Self-studying\Java_Learning\Practice\WebBanHang\src\main\webapp\resource\JS" />
+      <recent name="E:\Self-studying\Java_Learning\Practice\WebBanHang\src\main\webapp\resource\bootstrap-4.4.1\css" />
+      <recent name="E:\Self-studying\Java_Learning\Practice\WebBanHang\src\main\webapp\WEB-INF\views" />
       <recent name="E:\Self-studying\Java_Learning\Practice\WebBanHang\src\main\webapp\resource\Styles" />
       <recent name="E:\Self-studying\Java_Learning\Practice\WebBanHang\src\main\webapp\resource\Image" />
-      <recent name="E:\Self-studying\Java_Learning\Practice\WebBanHang\src\main\webapp\resource" />
+      <recent name="E:\Self-studying\Java_Learning\Practice\WebBanHang\src\main\webapp\resource\Fonts" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.34">
@@ -228,7 +331,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -266,6 +369,20 @@
       <workItem from="1581647281893" duration="1497000" />
       <workItem from="1581648984985" duration="23204000" />
       <workItem from="1581901060323" duration="22176000" />
+      <workItem from="1581997009098" duration="2120000" />
+      <workItem from="1582077472672" duration="1814000" />
+      <workItem from="1582095151141" duration="209000" />
+      <workItem from="1582095515458" duration="493000" />
+      <workItem from="1582164995510" duration="25074000" />
+      <workItem from="1582248573594" duration="22766000" />
+      <workItem from="1582274133514" duration="1723000" />
+      <workItem from="1582507117415" duration="3088000" />
+      <workItem from="1582510417771" duration="24228000" />
+      <workItem from="1582597036722" duration="10420000" />
+      <workItem from="1582609452577" duration="7780000" />
+      <workItem from="1582684060562" duration="9585000" />
+      <workItem from="1582768249945" duration="28016000" />
+      <workItem from="1582801429960" duration="3661000" />
     </task>
     <task id="LOCAL-00001" summary="OneToMany">
       <created>1581576166522</created>
@@ -302,27 +419,27 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="627" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581670670714" />
-    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580875632826">
+    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582784484584">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1580875632826" />
+    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582784484584" />
     <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1579875271064" />
-    <state x="721" y="140" key="#com.intellij.ide.util.MemberChooser" timestamp="1581927653298">
+    <state x="1040" y="140" key="#com.intellij.ide.util.MemberChooser" timestamp="1582790520116">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="721" y="140" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581927653298" />
+    <state x="1040" y="140" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582790520116" />
     <state x="514" y="140" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1580872160833">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="514" y="140" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1580872160833" />
-    <state x="452" y="100" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1580872554144">
+    <state x="452" y="100" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1582784466989">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="452" y="100" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1580872554144" />
-    <state x="627" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581594609419">
+    <state x="452" y="100" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582784466989" />
+    <state x="627" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582786894923">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="627" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581594609419" />
+    <state x="627" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582786894923" />
     <state x="457" y="51" key="CommitChangelistDialog2" timestamp="1581576160915">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -331,94 +448,106 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="459" height="546" key="DebuggerActiveHint/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581568866567" />
-    <state x="690" y="222" key="FileChooserDialogImpl" timestamp="1581324046322">
+    <state x="690" y="222" key="FileChooserDialogImpl" timestamp="1582784442515">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="222" key="FileChooserDialogImpl/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581324046322" />
-    <state width="1539" height="254" key="GridCell.Tab.0.bottom" timestamp="1581936351234">
+    <state x="690" y="222" key="FileChooserDialogImpl/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582784442515" />
+    <state width="1539" height="291" key="GridCell.Tab.0.bottom" timestamp="1582805094081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676708" />
-    <state width="1539" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351234" />
-    <state width="1539" height="254" key="GridCell.Tab.0.center" timestamp="1581936351233">
+    <state width="1539" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094081" />
+    <state width="1539" height="291" key="GridCell.Tab.0.center" timestamp="1582805094081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.0.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676708" />
-    <state width="1539" height="254" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351233" />
-    <state width="1539" height="254" key="GridCell.Tab.0.left" timestamp="1581936351233">
+    <state width="1539" height="291" key="GridCell.Tab.0.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060263" />
+    <state width="1539" height="291" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094081" />
+    <state width="1539" height="291" key="GridCell.Tab.0.left" timestamp="1582805094081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.0.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676708" />
-    <state width="1539" height="254" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351233" />
-    <state width="1539" height="254" key="GridCell.Tab.0.right" timestamp="1581936351234">
+    <state width="1539" height="291" key="GridCell.Tab.0.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060263" />
+    <state width="1539" height="291" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094081" />
+    <state width="1539" height="291" key="GridCell.Tab.0.right" timestamp="1582805094081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.0.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676708" />
-    <state width="1539" height="254" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351234" />
-    <state width="1539" height="254" key="GridCell.Tab.1.bottom" timestamp="1581936351234">
+    <state width="1539" height="291" key="GridCell.Tab.0.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060263" />
+    <state width="1539" height="291" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094081" />
+    <state width="1539" height="291" key="GridCell.Tab.1.bottom" timestamp="1582805094082">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676709" />
-    <state width="1539" height="254" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351234" />
-    <state width="1539" height="254" key="GridCell.Tab.1.center" timestamp="1581936351234">
+    <state width="1539" height="291" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094082" />
+    <state width="1539" height="291" key="GridCell.Tab.1.center" timestamp="1582805094082">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.1.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676709" />
-    <state width="1539" height="254" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351234" />
-    <state width="1539" height="254" key="GridCell.Tab.1.left" timestamp="1581936351234">
+    <state width="1539" height="291" key="GridCell.Tab.1.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094082" />
+    <state width="1539" height="291" key="GridCell.Tab.1.left" timestamp="1582805094081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.1.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676709" />
-    <state width="1539" height="254" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351234" />
-    <state width="1539" height="254" key="GridCell.Tab.1.right" timestamp="1581936351234">
+    <state width="1539" height="291" key="GridCell.Tab.1.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094081" />
+    <state width="1539" height="291" key="GridCell.Tab.1.right" timestamp="1582805094082">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.1.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676709" />
-    <state width="1539" height="254" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351234" />
-    <state width="1539" height="254" key="GridCell.Tab.2.bottom" timestamp="1581936351235">
+    <state width="1539" height="291" key="GridCell.Tab.1.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094082" />
+    <state width="1539" height="291" key="GridCell.Tab.2.bottom" timestamp="1582805094083">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676548" />
-    <state width="1539" height="254" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351235" />
-    <state width="1539" height="254" key="GridCell.Tab.2.center" timestamp="1581936351234">
+    <state width="1539" height="291" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094083" />
+    <state width="1539" height="291" key="GridCell.Tab.2.center" timestamp="1582805094082">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.2.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676548" />
-    <state width="1539" height="254" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351234" />
-    <state width="1539" height="254" key="GridCell.Tab.2.left" timestamp="1581936351234">
+    <state width="1539" height="291" key="GridCell.Tab.2.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094082" />
+    <state width="1539" height="291" key="GridCell.Tab.2.left" timestamp="1582805094082">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.2.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676548" />
-    <state width="1539" height="254" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351234" />
-    <state width="1539" height="254" key="GridCell.Tab.2.right" timestamp="1581936351234">
+    <state width="1539" height="291" key="GridCell.Tab.2.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094082" />
+    <state width="1539" height="291" key="GridCell.Tab.2.right" timestamp="1582805094082">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.2.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676548" />
-    <state width="1539" height="254" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351234" />
-    <state width="1539" height="254" key="GridCell.Tab.3.bottom" timestamp="1581936351235">
+    <state width="1539" height="291" key="GridCell.Tab.2.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094082" />
+    <state width="1539" height="291" key="GridCell.Tab.3.bottom" timestamp="1582805094083">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676549" />
-    <state width="1539" height="254" key="GridCell.Tab.3.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351235" />
-    <state width="1539" height="254" key="GridCell.Tab.3.center" timestamp="1581936351235">
+    <state width="1539" height="291" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.3.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094083" />
+    <state width="1539" height="291" key="GridCell.Tab.3.center" timestamp="1582805094083">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.3.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676548" />
-    <state width="1539" height="254" key="GridCell.Tab.3.center/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351235" />
-    <state width="1539" height="254" key="GridCell.Tab.3.left" timestamp="1581936351235">
+    <state width="1539" height="291" key="GridCell.Tab.3.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.3.center/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094083" />
+    <state width="1539" height="291" key="GridCell.Tab.3.left" timestamp="1582805094083">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.3.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676548" />
-    <state width="1539" height="254" key="GridCell.Tab.3.left/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351235" />
-    <state width="1539" height="254" key="GridCell.Tab.3.right" timestamp="1581936351235">
+    <state width="1539" height="291" key="GridCell.Tab.3.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.3.left/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094083" />
+    <state width="1539" height="291" key="GridCell.Tab.3.right" timestamp="1582805094083">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="254" key="GridCell.Tab.3.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581929676548" />
-    <state width="1539" height="254" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1581936351235" />
+    <state width="1539" height="291" key="GridCell.Tab.3.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582805060264" />
+    <state width="1539" height="291" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1582805094083" />
+    <state x="569" y="157" width="814" height="736" key="NewModule_or_Project.wizard" timestamp="1582000154202">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="569" y="157" width="814" height="736" key="NewModule_or_Project.wizard/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582000154202" />
     <state x="711" y="126" width="1209" height="883" key="SettingsEditor" timestamp="1581507477125">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="711" y="126" width="1209" height="883" key="SettingsEditor/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581507477125" />
+    <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1582189979543">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="968" height="533" key="XDebugger.FullValuePopup/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582189979543" />
+    <state x="92" y="92" width="1736" height="866" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1582197320788">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582197320788" />
     <state x="741" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581576174127">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -427,10 +556,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="605" y="75" width="710" height="900" key="find.popup/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1580872808680" />
-    <state x="532" y="239" key="run.anything.popup" timestamp="1581650817685">
+    <state x="532" y="239" key="run.anything.popup" timestamp="1582517488626">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="532" y="239" key="run.anything.popup/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1581650817685" />
+    <state x="532" y="239" key="run.anything.popup/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582517488626" />
     <state x="539" y="15" width="840" height="1034" key="search.everywhere.popup" timestamp="1581663322045">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

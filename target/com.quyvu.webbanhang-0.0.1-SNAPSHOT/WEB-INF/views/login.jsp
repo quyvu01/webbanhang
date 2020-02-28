@@ -76,11 +76,6 @@
 								Tên đăng ký đã tồn tại!
 							</c:if>
 						</span>
-						<span id="hiden-span" hidden="hidden">
-							<c:if test="${Status != 2001}">
-								True
-							</c:if>
-						</span>
 					</div>
 				</div>
 				<div id="container-social-login">

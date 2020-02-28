@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class ChiTietHoaDonId implements Serializable {
     int mahoadon;
     int machitietsanpham;
-
+    
     public int getMahoadon() {
         return mahoadon;
     }

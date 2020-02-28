@@ -12,12 +12,21 @@ public class SanPham {
     String giatien;
     String mota;
     String hinhsanpham;
-    
+    String danhcho;
+
+    public String getDanhcho() {
+        return danhcho;
+    }
+
+    public void setDanhcho(String danhcho) {
+        this.danhcho = danhcho;
+    }
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="madanhmuc")
     DanhMucSanPham danhMucSanPham;
     
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name="masanpham")
     Set<ChiTietSanPham> setChiTietSanPham;
 

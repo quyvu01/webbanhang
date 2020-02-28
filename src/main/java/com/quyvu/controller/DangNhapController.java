@@ -2,22 +2,21 @@ package com.quyvu.controller;
 
 import com.quyvu.entity.NhanVien;
 import com.quyvu.service.NhanVienService;
-import jdk.jfr.Event;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import javax.servlet.http.HttpSession;
-import javax.transaction.Transactional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Controller
 @RequestMapping("/login")
 public class DangNhapController {
-	
-	Event event;
-	
 	@Autowired
 	NhanVienService nhanVienService;
 	

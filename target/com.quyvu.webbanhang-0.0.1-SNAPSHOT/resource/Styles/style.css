@@ -144,6 +144,33 @@ html, body {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+#product-Count{
+	width: 20px;
+	height: 20px;
+	border: red;
+	font-size: 12px;
+	background-color: red;
+	border-radius: 10px;
+	color: white;
+	margin-left: -27px;
+	margin-top: -1px;
+	text-align: center;
+}
+.product-List{
+	margin-top: 8px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.product-List ul{
+	background-color: #0f6674 !important;
+	border: unset;
+}
+.product-List li > a{
+	margin-left: 5px;
+	font-weight: normal;
+	font-size: 15px;
+	color: white !important;
+}
 .header_background a{
 	color: white !important;
 }
@@ -204,16 +231,16 @@ html, body {
 	font-size: 32px;
 	font-weight: bold;
 }
-#img-sample-size{
+.img-sample-size{
 	margin-top: 48px;
 	margin-left: 50px;
 	margin-right: 50px;
 	text-align: center;
 }
-#img-sample-size img{
+.img-sample-size img{
 	width: 100%;
 }
-#img-sample-size span{
+.img-sample-size span{
 	font-weight: bold;
 	font-size: 17px;
 }
@@ -292,3 +319,94 @@ html, body {
 }
 
 /* css End Home page*/
+/* Page chi tiet*/
+#header-detail{
+	background-color: #2f2323;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.btn-add-adj{
+	width: 30px; 
+	height: 30px; 
+	border: white; 
+	border-radius: 15px;
+}
+.btn-add-cart{
+	height: 30px;
+	border: white;
+	border-radius: 15px;
+	margin-left: 10px;
+	color: white;
+	background-color: #0f6674;
+}
+.btn-pay{
+	height: 30px;
+	border: white;
+	border-radius: 15px;
+	margin-left: 10px;
+	color: white;
+	background-color: #0f6674;
+	margin-left: 50%;
+}
+.btn-remove{
+	height: 30px;
+	border: white;
+	border-radius: 15px;
+	margin-left: 10px;
+	color: white;
+	background-color: #721c24;
+}
+/* End page chi tiet*/
+/* css Gio hang*/
+.customer-form{
+	
+}
+.customer-form input[type=text]{
+	width: 80%;
+	height: 40px;
+	border-radius: 5px;
+}
+.customer-form textarea{
+	width: 80%;
+	height: 150px;
+	border-radius: 5px;
+}
+.customer-form label{
+	margin-top: 10px;
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 2px;
+}
+.customer-form input[type=submit]{
+	height: 40px;
+	width: 200px;
+	border: white;
+	border-radius: 15px;
+	color: white;
+	background-color: #0f6674;
+	font-size: 20px;
+	margin-left: 25%;
+}
+/*end css Gio hang*/
+/* css Menu*/
+.menu-general{
+	cursor: pointer;
+}
+/*.menu-general li:hover > ul{*/
+/*	display: block;*/
+/*}*/
+/*.menu-general li > ul{*/
+/*	display: none;*/
+/*}*/
+.menu-general ul, li{
+	list-style: none;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 4px 0px;
+}
+/* End css Menu*/
+/*css ThemSanPham*/
+.pageIsOnActive{
+	background-color: #0f6674;
+}
+/*end css ThemSanPham*/

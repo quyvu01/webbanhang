@@ -13,7 +13,9 @@ public class HoaDon {
     String diachigiaohang;
     Boolean tinhtranghoadon;
     String ngaylap;
+    String ghichu;
     
+
     @OneToMany
     @JoinColumn(name="mahoadon")
     Set<ChiTietHoaDon> danhSachChiTietHoaDon;
@@ -73,4 +75,8 @@ public class HoaDon {
     public void setNgaylap(String ngaylap) {
         this.ngaylap = ngaylap;
     }
+    
+    public String getGhichu() { return ghichu;  }
+
+    public void setGhichu(String ghichu) { this.ghichu = ghichu; }
 }

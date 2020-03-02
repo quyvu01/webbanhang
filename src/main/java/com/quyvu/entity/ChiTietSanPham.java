@@ -9,14 +9,16 @@ public class ChiTietSanPham {
     int machitietsanpham;
     int soluong;
     String ngaynhap;
-    
-    @OneToOne(cascade = CascadeType.ALL)
+
+    /*Notice: CascadeType.ALL is usualy use for Detail pages.*/
+    /* Không bao giờ trỏ casadeType tới khóa chính của những bảng khác*/
+    @OneToOne()
     @JoinColumn(name="masanpham")
     SanPham sanPham;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne()
     @JoinColumn(name="masize")
     Size size;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne()
     @JoinColumn(name="mamau")
     MauSanPham mauSanPham;
 

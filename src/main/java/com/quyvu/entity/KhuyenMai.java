@@ -15,7 +15,7 @@ public class KhuyenMai {
     int giagiam;
     
     @ManyToMany
-    @JoinTable(name="chitietkhuyenmai", 
+    @JoinTable(name="ChiTietKhuyenMai", 
             joinColumns = {@JoinColumn(name="makhuyenmai", referencedColumnName = "makhuyenmai")}, 
             inverseJoinColumns = {@JoinColumn(name="masanpham", referencedColumnName = "masanpham")})
     Set<SanPham> danhsachsanpham;

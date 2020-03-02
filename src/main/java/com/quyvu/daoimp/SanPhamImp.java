@@ -12,5 +12,6 @@ public interface SanPhamImp {
     List<SanPham> LayDanhSachSanPhamLimit(int sanphambatdau, int sanphamsize);
     SanPham LaySanPhamTheoMa(int masanpham);
     DanhMucSanPham LayDanhMucSanPham(int madanhmuc);
+    void XoaSanPham(int masanpham);
     int TongSoSanPhaM();
 }

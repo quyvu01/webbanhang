@@ -2,7 +2,7 @@ package com.quyvu.entity;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name="ChiTietHoaDon")
 public class ChiTietHoaDon {
     @EmbeddedId ChiTietHoaDonId chiTietHoaDon;
     int soluong;

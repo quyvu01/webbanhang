@@ -36,60 +36,75 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <div class="page-container">
     <!--/content-inner-->
-    <c:set var="PRODUCT_PER_PAGE" value="5"></c:set>
     <div class="left-content">
         <div class="row">
-            <div class="col-md-3">
-                <h3 style="margin-top: 20px;">TẤT CẢ SẢN PHẨM</h3>
-            </div>
-            <div class="col-md-2">
-                <button class="btn btn-success btn-add-product" style="margin-top: 20px;">Thêm sản phẩm</button>
-            </div>
-            <div class="col-md-2">
-                <button class="btn btn-danger btn-remove-product" style="margin-top: 20px;">Xóa sản phẩm</button>
-            </div>
-            <div class="col-md-2">
-                <button class="btn btn-warning btn-edit-product" style="margin-top: 20px;">Sửa sản phẩm</button>
-            </div>
-            <div class="col-md-3">
+            <div class="col-md-7 col-sm-12 row">
+                <div class="col-md-6">
+                    <h3 style="margin-top: 20px;">TẤT CẢ SẢN PHẨM</h3>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-danger btn-remove-product" style="margin-top: 20px;">XÓA SẢN PHẨM</a>
+                </div>
                 
-            </div>
-            <table class="table table-sanpham">
-                <thead>
-                <tr>
-                    <td>
-                        <div>
-                            <input class="checkbox-all" type="checkbox">
-                        </div>
-                    </td>
-                    <td>Tên sản phẩm</td>
-                    <td>Giá tiền</td>
-                    <td>Giành cho(Nam/Nữ)</td>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="danhsachsanpham" items="${danhsachsanpham}">
+                <table class="table table-sanpham">
+                    <thead>
                     <tr>
                         <td>
                             <div>
-                                <input class="checkbox-item" type="checkbox" value="${danhsachsanpham.masanpham}">
+                                <input class="checkbox-all" type="checkbox">
                             </div>
                         </td>
-                        <td>${danhsachsanpham.tensanpham}</td>
-                        <td>${danhsachsanpham.giatien}</td>
-                        <td>${danhsachsanpham.danhcho}</td>
+                        <td>Tên sản phẩm</td>
+                        <td>Giá tiền</td>
+                        <td>Giành cho(Nam/Nữ)</td>
                     </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-            <div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <c:forEach var="page" begin="${1}" end="${tongsotrang}">
-                            <li style="cursor: pointer" class="page-item"><a class="page-link themsanpham-page">${page}</a></li>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="danhsachsanpham" items="${danhsachsanpham}">
+                        <tr>
+                            <td>
+                                <div>
+                                    <input class="checkbox-item" type="checkbox" value="${danhsachsanpham.masanpham}">
+                                </div>
+                            </td>
+                            <td>${danhsachsanpham.tensanpham}</td>
+                            <td>${danhsachsanpham.giatien}</td>
+                            <td>${danhsachsanpham.danhcho}</td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+                <div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <c:forEach var="page" begin="${1}" end="${tongsotrang}">
+                                <li style="cursor: pointer" class="page-item"><a class="page-link themsanpham-page">${page}</a></li>
+                            </c:forEach>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12" style="margin-top: 20px">
+                <div class="form-group">
+                    <label>Tên sản phẩm: </label><input class="form-control" name="tensp" placeholder="Nhập tên sản phẩm"><br/>
+                    <label>Tên danh mục: </label>
+                    <select name="madanhmuc" class="form-control">
+                        <c:forEach var="danhmuc" items="${listdanhmucsanpham}">
+                            <option value="${danhmuc.madanhmuc}">${danhmuc.tendanhmuc}</option>
                         </c:forEach>
-                    </ul>
-                </nav>
+                    </select>
+                    <label>Giá tiền: </label><input class="form-control" name="giatien" placeholder="Nhập giá tiền"><br/>
+                    <label>Mô tả: </label><textarea class="form-control" name="mota" placeholder="Mô tả sản phẩm"></textarea><br/>
+                    <label>Hình sản phẩm: </label><input id="hinhanh" type="file" class="form-control" name="hinhanh" placeholder="Nhập giá tiền"><br/>
+                    <label>Dành cho Nam/Nữ: </label>
+                    <select name="danhcho" class="form-control">
+                        <option value="nam">Nam</option>
+                        <option value="nu">Nữ</option>
+                    </select>
+                    <div style="text-align: center; margin-top: 30px">
+                        <a class="btn btn-success btn-add-product" style="margin-top: 20px;">THÊM SẢN PHẨM</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -161,7 +176,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--js -->
 <script src="<c:url value="/resource/JS/jquery.nicescroll.js"/>"></script>
 <script src="<c:url value="/resource/JS/scripts.js"/>"></script>
-<script src="<c:url value="/resource/JS/custom.js"/>"></script>
+<%--<script src="<c:url value="/resource/JS/custom.js"/>"></script>--%>
 <!-- Bootstrap Core JavaScript -->
 <script src="<c:url value="/resource/JS/bootstrap.min.js"/>"></script>
 <!-- /Bootstrap Core JavaScript -->

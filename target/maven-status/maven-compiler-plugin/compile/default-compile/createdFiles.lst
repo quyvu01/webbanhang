@@ -16,6 +16,7 @@ com\quyvu\entity\KhuyenMai.class
 com\quyvu\dao\NhanVienDAO.class
 com\quyvu\daoimp\HoaDonImp.class
 com\quyvu\controller\DashBoardController.class
+com\quyvu\entity\ChiTietKhuyenMai.class
 com\quyvu\controller\DangNhapController.class
 com\quyvu\entity\NhanVien.class
 com\quyvu\entity\ChucVu.class

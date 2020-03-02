@@ -31,6 +31,11 @@ public class SanPhamService implements SanPhamImp {
     }
 
     @Override
+    public void XoaSanPham(int masanpham) {
+        sanPhamDAO.XoaSanPham(masanpham);
+    }
+
+    @Override
     public int TongSoSanPhaM() {
         return sanPhamDAO.TongSoSanPhaM();
     }

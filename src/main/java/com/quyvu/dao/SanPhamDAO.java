@@ -1,8 +1,7 @@
 package com.quyvu.dao;
 
 import com.quyvu.daoimp.SanPhamImp;
-import com.quyvu.entity.DanhMucSanPham;
-import com.quyvu.entity.SanPham;
+import com.quyvu.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +41,20 @@ public class SanPhamDAO implements SanPhamImp {
     public DanhMucSanPham LayDanhMucSanPham(int madanhmuc) {
         Session session=sessionFactory.getCurrentSession();
         return (DanhMucSanPham) session.createQuery("from DanhMucSanPham where madanhmuc='"+madanhmuc+"'").getSingleResult();
+    }
+    
+    @Override
+    @Transactional
+    public void XoaSanPham(int masanpham) {
+        Session session =sessionFactory.getCurrentSession();
+        SanPham sanPham = session.get(SanPham.class, masanpham=masanpham);
+        Set<ChiTietSanPham> setChiTietSanPham=sanPham.getSetChiTietSanPham();
+        for (ChiTietSanPham chiTietSanPham:setChiTietSanPham){
+            session.createQuery("delete ChiTietHoaDon where machitietsanpham='"+chiTietSanPham.getMachitietsanpham()+"'").executeUpdate();
+        }
+        session.createQuery("delete chitietsanpham where masanpham='"+masanpham+"'").executeUpdate();
+        session.createQuery("delete ChiTietKhuyenMai where masanpham ='"+masanpham+"'").executeUpdate();
+        session.createQuery("delete SanPham where masanpham='"+masanpham+"'").executeUpdate();
     }
 
     @Override

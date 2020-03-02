@@ -174,13 +174,48 @@ $(document).ready(function () {
         })        
     });
     $(".btn-remove-product").click(function () {
-        $(".table-sanpham input:checked").each(function () {
-            alert($(this).val());
+        $(".table-sanpham > tbody input:checked").each(function () {
+            let productId=parseInt($(this).val());
+            this.closest("tr").remove();
+            $.ajax({
+                url:"/com_quyvu_webbanhang_war_exploded/api/removeproduct",
+                type:"GET",
+                data:{
+                    productId:productId
+                },
+                success: function (value) {
+                    
+                }
+            })
         });
     });
     $(".checkbox-all").change(function () {
         if(this.checked){
-            alert($(".table-sanpham input").val());
+            $(".table-sanpham input:checkbox").prop('checked',true);
         }
+        else 
+            $(".table-sanpham input:checkbox").prop('checked',false);
     })
+    $(".checkbox-item").change(function () {
+        $(".table-sanpham > tbody input:checkbox").each(function () {
+            if(!this.checked)
+                $(".checkbox-all").prop('checked',false);
+        })
+    });
+    $("#hinhanh").change(function (event) {
+        let files=event.target.files;
+        let forms = new FormData();
+        forms.append("file", files[0]);
+        $.ajax({
+            url:"/com_quyvu_webbanhang_war_exploded/api/uploadFile",
+            type:"POST",
+            data:forms,
+            contentType: false,
+            processData: false,
+            enctype:"multipart/form-data",
+            success: function (value) {
+
+            }
+        })
+    });
 })

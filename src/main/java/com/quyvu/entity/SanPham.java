@@ -26,7 +26,7 @@ public class SanPham {
     @JoinColumn(name="madanhmuc")
     DanhMucSanPham danhMucSanPham;
     
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) // => Bảng chứa khóa ngoại thì xài casacadeType.ALL, không thì thôi
     @JoinColumn(name="masanpham")
     Set<ChiTietSanPham> setChiTietSanPham;
 

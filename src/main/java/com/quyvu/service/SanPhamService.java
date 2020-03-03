@@ -3,7 +3,9 @@ package com.quyvu.service;
 import com.quyvu.dao.SanPhamDAO;
 import com.quyvu.daoimp.SanPhamImp;
 import com.quyvu.entity.DanhMucSanPham;
+import com.quyvu.entity.MauSanPham;
 import com.quyvu.entity.SanPham;
+import com.quyvu.entity.Size;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,6 +40,16 @@ public class SanPhamService implements SanPhamImp {
     @Override
     public int TongSoSanPhaM() {
         return sanPhamDAO.TongSoSanPhaM();
+    }
+
+    @Override
+    public boolean ThemSanPham(SanPham sanPham) {
+        return sanPhamDAO.ThemSanPham(sanPham);
+    }
+
+    @Override
+    public boolean UpdateSanPham(SanPham sanPham) {
+        return sanPhamDAO.UpdateSanPham(sanPham);
     }
 
 }

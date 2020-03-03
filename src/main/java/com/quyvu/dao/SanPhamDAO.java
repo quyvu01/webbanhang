@@ -64,4 +64,22 @@ public class SanPhamDAO implements SanPhamImp {
         return session.createQuery("from SanPham").list().size();
     }
 
+    @Override
+    @Transactional
+    public boolean ThemSanPham(SanPham sanPham) {
+        Session session=sessionFactory.getCurrentSession();
+        return session.save(sanPham) != null;
+    }
+
+    @Override
+    @Transactional
+    public boolean UpdateSanPham(SanPham sanPham) {
+        Session session=sessionFactory.getCurrentSession();
+        try{
+            session.update(sanPham);
+        }catch (Exception ex){
+            return false;
+        }
+        return true;
+    }
 }

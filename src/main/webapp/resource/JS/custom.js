@@ -202,8 +202,10 @@ $(document).ready(function () {
                 $(".checkbox-all").prop('checked',false);
         })
     });
+    let hinhsanpham;
     $("#hinhanh").change(function (event) {
         let files=event.target.files;
+        hinhsanpham=files[0].name;
         let forms = new FormData();
         forms.append("file", files[0]);
         $.ajax({
@@ -218,4 +220,45 @@ $(document).ready(function () {
             }
         })
     });
+    $("body").on('click',".btn-themchitiet",function () {
+        let chitietclone=$("#themchitietsanpham").clone();
+        chitietclone.removeAttr("id");
+        $("#clonechitietsanpham").append(chitietclone);
+        
+    });
+    $("#btn-add-product").click(function (event) {
+        event.preventDefault();
+        let productSerialize=$("form").serializeArray();
+        let json = {};
+        $.each(productSerialize, function(i, field){
+            json[field.name]=field.value;
+        });
+        
+        let arrayDetail=[];
+        
+        $(".themchitietsanpham").each(function () {
+            if($(this).attr('id')!="themchitietsanpham"){
+                let objecDetail={};
+                let productSize = $(this).find(".productSize").val();
+                let productColor = $(this).find(".productColor").val();
+                let productCount = $(this).find(".productCount").val();
+                objecDetail[$(this).find(".productSize").attr("dataId")]=productSize;
+                objecDetail[$(this).find(".productColor").attr("dataId")]=productColor;
+                objecDetail[$(this).find(".productCount").attr("dataId")]=productCount;
+                arrayDetail.push(objecDetail);
+            }
+        })
+        json["setChiTietSanPham"]=arrayDetail;
+        json["hinhsanpham"]=hinhsanpham;
+        $.ajax({
+            url:"/com_quyvu_webbanhang_war_exploded/api/addproduct",
+            type:"POST",
+            data:{
+                dataJson:JSON.stringify(json)
+            },
+            success: function (value) {
+                
+            }
+        })
+    })
 })

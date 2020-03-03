@@ -93,7 +93,7 @@
 		<span>SẢN PHẨM HOT</span>
 	</div>
 	<div  class=" row img-sample-size">
-		<c:forEach var="sanpham" items="${firstProducts}">
+		<c:forEach var="sanpham" items="${pageProduct}">
 			<a href="<c:url value="/chitiet/${sanpham.masanpham}"/>" class="col-md-3 col-sm-6">
 			<div class="product wow zoomIn">
 				<img alt="${sanpham.tensanpham}" src="<c:url value="/resource/Image/Product/${sanpham.hinhsanpham}.jpg" />"/>
@@ -101,7 +101,16 @@
 				<span class="produc-price">Giá: ${sanpham.giatien} đ</span>
 			</div>
 			</a>
-		</c:forEach>		
+		</c:forEach>
+	</div>
+	<div>
+		<nav aria-label="Page navigation example">
+			<ul class="pagination">
+				<c:forEach var="page" begin="${1}" end="${tongsotrang}">
+					<li style="cursor: pointer" class="page-item"><a href="<c:url value="/${page}"/>" class="page-link home-page">${page}</a></li>
+				</c:forEach>
+			</ul>
+		</nav>
 	</div>
 	<!--Footer-->
 	<div id="footer-special" class="container-fluid">

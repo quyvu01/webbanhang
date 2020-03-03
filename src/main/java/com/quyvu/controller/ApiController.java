@@ -1,9 +1,12 @@
 package com.quyvu.controller;
 
-import com.quyvu.entity.GioHang;
-import com.quyvu.entity.SanPham;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.quyvu.entity.*;
 import com.quyvu.service.NhanVienService;
 import com.quyvu.service.SanPhamService;
+import com.quyvu.service.SizeSanPhamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,9 +18,12 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.util.*;
+import java.util.stream.Stream;
 
 @Controller
 @RequestMapping("api/")
@@ -29,6 +35,8 @@ public class ApiController {
     SanPhamService sanPhamService;
     @Autowired
     ServletContext servletContext;
+    @Autowired
+    SizeSanPhamService sizeSanPhamService;
 
     private int PRODUCT_PER_PAGE=5;
     @GetMapping("dangnhap")
@@ -131,8 +139,49 @@ public class ApiController {
         System.out.println("Path file: "+path_Save_File);
         return "null";
     }
+
+    @PostMapping("addproduct")
+    @ResponseBody
+    public String ThemSanPham(@RequestParam String dataJson) throws JsonProcessingException {
+        System.out.println(dataJson);
+        SanPham sanPham=dataJsonToSanPham(dataJson);
+        if(sanPham.getTensanpham().isEmpty()){
+            System.out.println("Please enter the name");
+            return "Please enter the name";
+        }
+        sanPhamService.ThemSanPham(sanPham);     
+        return "Addproduct Successful";
+    }
     
-    
+    private SanPham dataJsonToSanPham(String dataJson) throws JsonProcessingException {
+        ObjectMapper objectMapper=new ObjectMapper();
+        JsonNode jsonNode=objectMapper.readTree(dataJson);
+        JsonNode jsonChiTiet= jsonNode.get("setChiTietSanPham");
+        Set<ChiTietSanPham> setChiTietSanPham=new HashSet<>();
+        for (JsonNode obj:jsonChiTiet){
+            Size size=new Size();
+            size.setMasize(obj.get("masize").asInt());
+            MauSanPham mauSanPham=new MauSanPham();
+            mauSanPham.setMamau(obj.get("mamau").asInt());
+            ChiTietSanPham chiTietSanPham=new ChiTietSanPham();
+            chiTietSanPham.setSize(size);
+            chiTietSanPham.setNgaynhap(LocalDate.now().toString());
+            chiTietSanPham.setMauSanPham(mauSanPham);
+            setChiTietSanPham.add(chiTietSanPham);
+        }
+        SanPham sanPham=new SanPham();
+        sanPham.setSetChiTietSanPham(setChiTietSanPham);
+        DanhMucSanPham danhMucSanPham=new DanhMucSanPham();
+        danhMucSanPham.setMadanhmuc(jsonNode.get("madanhmuc").asInt());
+        sanPham.setDanhMucSanPham(danhMucSanPham);
+        sanPham.setTensanpham(jsonNode.get("tensanpham").asText());
+        sanPham.setGiatien(jsonNode.get("giatien").asText());
+        sanPham.setDanhcho(jsonNode.get("danhcho").asText());
+        sanPham.setMota(jsonNode.get("mota").asText());
+        String hinhsanpham=jsonNode.get("hinhsanpham").asText();
+        sanPham.setHinhsanpham(hinhsanpham.substring(0,hinhsanpham.lastIndexOf('.')));
+        return sanPham;
+    }
     private String HTML(List<SanPham> listSanPham){
         String html="";
         if(listSanPham==null)

@@ -3,7 +3,9 @@ package com.quyvu.controller;
 import com.quyvu.entity.DanhMucSanPham;
 import com.quyvu.entity.SanPham;
 import com.quyvu.service.DanhMucSanPhamService;
+import com.quyvu.service.MauSanPhamService;
 import com.quyvu.service.SanPhamService;
+import com.quyvu.service.SizeSanPhamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -23,6 +25,10 @@ public class ThemSanPhamController {
     SanPhamService sanPhamService;
     @Autowired
     DanhMucSanPhamService danhMucSanPhamService;
+    @Autowired
+    MauSanPhamService mauSanPhamService;
+    @Autowired
+    SizeSanPhamService sizeSanPhamService;
     @GetMapping()
     public String Default(ModelMap modelMap, HttpSession httpSession){
         float tongsosanpham= (float)sanPhamService.TongSoSanPhaM();
@@ -33,6 +39,8 @@ public class ThemSanPhamController {
         
         List<DanhMucSanPham> listDanhMucSanPham=danhMucSanPhamService.ListSanPham();
         modelMap.addAttribute("listdanhmucsanpham", listDanhMucSanPham);
+        modelMap.addAttribute("listSize", sizeSanPhamService.listSize());
+        modelMap.addAttribute("listMauSanPham",mauSanPhamService.listMauSanPham());
         
         return "themsanpham";
     }

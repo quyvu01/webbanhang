@@ -7,43 +7,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3172225-b2b0-42ae-93cb-9f860d4f5ce6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietKhuyenMai.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/dao/MauSanPhamDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/dao/SizeSanPhamDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/daoimp/MauSanPhamImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/daoimp/SizeSanPhamImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/service/MauSanPhamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/service/SizeSanPhamService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/com_quyvu_webbanhang_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/com_quyvu_webbanhang_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.quyvu.webbanhang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/com.quyvu.webbanhang.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/ThemSanPhamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/ThemSanPhamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/TrangChuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/controller/TrangChuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/dao/SanPhamDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/dao/SanPhamDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/daoimp/SanPhamImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/daoimp/SanPhamImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietHoaDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietHoaDon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietSanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/ChiTietSanPham.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/KhuyenMai.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/KhuyenMai.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/SanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/entity/SanPham.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quyvu/service/SanPhamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quyvu/service/SanPhamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/IoC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/IoC.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/minishop-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/minishop-servlet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/themsanpham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/themsanpham.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/trangchu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/trangchu.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/JS/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/JS/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IoC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IoC.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/Styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/ApiController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/ChiTietController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/ChiTietController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/DangNhapController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/DangNhapController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/DashBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/DashBoardController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/GioHangController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/GioHangController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/SanPhamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/SanPhamController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/ThemSanPhamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/ThemSanPhamController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/controller/TrangChuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/controller/TrangChuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/dao/ChiTietHoaDonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/dao/ChiTietHoaDonDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/dao/DanhMucSanPhamDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/dao/DanhMucSanPhamDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/dao/HoaDonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/dao/HoaDonDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/dao/NhanVienDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/dao/NhanVienDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/dao/SanPhamDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/dao/SanPhamDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/ChiTietHoaDonImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/ChiTietHoaDonImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/DanhMucSanPhamImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/DanhMucSanPhamImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/HoaDonImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/HoaDonImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/NhanVienImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/NhanVienImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/SanPhamImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/daoimp/SanPhamImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietHoaDon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietHoaDon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietHoaDonId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietHoaDonId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietKhuyenMai.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietKhuyenMai.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietSanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChiTietSanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChucVu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/ChucVu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/DanhMucSanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/DanhMucSanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/GioHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/GioHang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/HoaDon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/HoaDon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/KhuyenMai.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/KhuyenMai.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/MauSanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/MauSanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/NhanVien.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/NhanVien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/SanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/SanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/entity/Size.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/entity/Size.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/service/ChiTietHoaDonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/service/ChiTietHoaDonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/service/DanhMucSanPhamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/service/DanhMucSanPhamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/service/HoaDonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/service/HoaDonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/service/NhanVienService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/service/NhanVienService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quyvu/service/SanPhamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quyvu/service/SanPhamService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/IoC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/IoC.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/ApiController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/ChiTietController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/ChiTietController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/DangNhapController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/controller/DangNhapController.class" afterDir="false" />
@@ -56,12 +79,13 @@
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/dao/SanPhamDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/dao/SanPhamDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/daoimp/SanPhamImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/daoimp/SanPhamImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/ChiTietHoaDon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/ChiTietHoaDon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/ChiTietKhuyenMai.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/ChiTietKhuyenMai.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/ChiTietSanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/ChiTietSanPham.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/KhuyenMai.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/entity/KhuyenMai.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/service/SanPhamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/classes/com/quyvu/service/SanPhamService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/views/themsanpham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/WEB-INF/views/themsanpham.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/resource/JS/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/resource/JS/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/resource/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.quyvu.webbanhang-0.0.1-SNAPSHOT/resource/Styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +109,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -240,7 +264,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -296,7 +320,8 @@
       <workItem from="1582878418216" duration="14551000" />
       <workItem from="1583061788003" duration="643000" />
       <workItem from="1583113319925" duration="2433000" />
-      <workItem from="1583115957707" duration="5373000" />
+      <workItem from="1583115957707" duration="16325000" />
+      <workItem from="1583202227517" duration="24158000" />
     </task>
     <task id="LOCAL-00001" summary="OneToMany">
       <created>1581576166522</created>
@@ -338,10 +363,10 @@
     </state>
     <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582784484584" />
     <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1579875271064" />
-    <state x="1040" y="140" key="#com.intellij.ide.util.MemberChooser" timestamp="1582884393238">
+    <state x="1040" y="140" key="#com.intellij.ide.util.MemberChooser" timestamp="1583234584045">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1040" y="140" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582884393238" />
+    <state x="1040" y="140" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583234584045" />
     <state x="514" y="140" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1580872160833">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -366,86 +391,86 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="222" key="FileChooserDialogImpl/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1582784442515" />
-    <state width="1539" height="280" key="GridCell.Tab.0.bottom" timestamp="1583121071810">
+    <state width="1539" height="280" key="GridCell.Tab.0.bottom" timestamp="1583239444639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071810" />
-    <state width="1539" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001843" />
-    <state width="1539" height="280" key="GridCell.Tab.0.center" timestamp="1583121071809">
+    <state width="1539" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444639" />
+    <state width="1539" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805265" />
+    <state width="1539" height="280" key="GridCell.Tab.0.center" timestamp="1583239444639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.0.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071809" />
-    <state width="1539" height="280" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001843" />
-    <state width="1539" height="280" key="GridCell.Tab.0.left" timestamp="1583121071809">
+    <state width="1539" height="280" key="GridCell.Tab.0.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444639" />
+    <state width="1539" height="280" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805264" />
+    <state width="1539" height="280" key="GridCell.Tab.0.left" timestamp="1583239444639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.0.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071809" />
-    <state width="1539" height="280" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001843" />
-    <state width="1539" height="280" key="GridCell.Tab.0.right" timestamp="1583121071810">
+    <state width="1539" height="280" key="GridCell.Tab.0.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444639" />
+    <state width="1539" height="280" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805264" />
+    <state width="1539" height="280" key="GridCell.Tab.0.right" timestamp="1583239444639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.0.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071810" />
-    <state width="1539" height="280" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001843" />
-    <state width="1539" height="280" key="GridCell.Tab.1.bottom" timestamp="1583121071810">
+    <state width="1539" height="280" key="GridCell.Tab.0.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444639" />
+    <state width="1539" height="280" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805265" />
+    <state width="1539" height="280" key="GridCell.Tab.1.bottom" timestamp="1583239444639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071810" />
-    <state width="1539" height="280" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.1.center" timestamp="1583121071810">
+    <state width="1539" height="280" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444639" />
+    <state width="1539" height="280" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805265" />
+    <state width="1539" height="280" key="GridCell.Tab.1.center" timestamp="1583239444639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.1.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071810" />
-    <state width="1539" height="280" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.1.left" timestamp="1583121071810">
+    <state width="1539" height="280" key="GridCell.Tab.1.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444639" />
+    <state width="1539" height="280" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805265" />
+    <state width="1539" height="280" key="GridCell.Tab.1.left" timestamp="1583239444639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.1.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071810" />
-    <state width="1539" height="280" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.1.right" timestamp="1583121071810">
+    <state width="1539" height="280" key="GridCell.Tab.1.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444639" />
+    <state width="1539" height="280" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805265" />
+    <state width="1539" height="280" key="GridCell.Tab.1.right" timestamp="1583239444639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.1.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071810" />
-    <state width="1539" height="280" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.2.bottom" timestamp="1583121071630">
+    <state width="1539" height="280" key="GridCell.Tab.1.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444639" />
+    <state width="1539" height="280" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805265" />
+    <state width="1539" height="280" key="GridCell.Tab.2.bottom" timestamp="1583239444641">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071630" />
-    <state width="1539" height="280" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.2.center" timestamp="1583121071630">
+    <state width="1539" height="280" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444641" />
+    <state width="1539" height="280" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805266" />
+    <state width="1539" height="280" key="GridCell.Tab.2.center" timestamp="1583239444641">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.2.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071630" />
-    <state width="1539" height="280" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.2.left" timestamp="1583121071630">
+    <state width="1539" height="280" key="GridCell.Tab.2.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444641" />
+    <state width="1539" height="280" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805265" />
+    <state width="1539" height="280" key="GridCell.Tab.2.left" timestamp="1583239444639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.2.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071630" />
-    <state width="1539" height="280" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.2.right" timestamp="1583121071630">
+    <state width="1539" height="280" key="GridCell.Tab.2.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444639" />
+    <state width="1539" height="280" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805265" />
+    <state width="1539" height="280" key="GridCell.Tab.2.right" timestamp="1583239444641">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.2.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071630" />
-    <state width="1539" height="280" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.3.bottom" timestamp="1583121071630">
+    <state width="1539" height="280" key="GridCell.Tab.2.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444641" />
+    <state width="1539" height="280" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805266" />
+    <state width="1539" height="280" key="GridCell.Tab.3.bottom" timestamp="1583239444641">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071630" />
-    <state width="1539" height="280" key="GridCell.Tab.3.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.3.center" timestamp="1583121071630">
+    <state width="1539" height="280" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444641" />
+    <state width="1539" height="280" key="GridCell.Tab.3.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805266" />
+    <state width="1539" height="280" key="GridCell.Tab.3.center" timestamp="1583239444641">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.3.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071630" />
-    <state width="1539" height="280" key="GridCell.Tab.3.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.3.left" timestamp="1583121071630">
+    <state width="1539" height="280" key="GridCell.Tab.3.center/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444641" />
+    <state width="1539" height="280" key="GridCell.Tab.3.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805266" />
+    <state width="1539" height="280" key="GridCell.Tab.3.left" timestamp="1583239444641">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.3.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071630" />
-    <state width="1539" height="280" key="GridCell.Tab.3.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
-    <state width="1539" height="280" key="GridCell.Tab.3.right" timestamp="1583121071630">
+    <state width="1539" height="280" key="GridCell.Tab.3.left/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444641" />
+    <state width="1539" height="280" key="GridCell.Tab.3.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805266" />
+    <state width="1539" height="280" key="GridCell.Tab.3.right" timestamp="1583239444641">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1539" height="280" key="GridCell.Tab.3.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583121071630" />
-    <state width="1539" height="280" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583063001844" />
+    <state width="1539" height="280" key="GridCell.Tab.3.right/0.0.1920.1050/-1280.0.1280.994@0.0.1920.1050" timestamp="1583239444641" />
+    <state width="1539" height="280" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583133805266" />
     <state x="569" y="157" width="814" height="736" key="NewModule_or_Project.wizard" timestamp="1582000154202">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

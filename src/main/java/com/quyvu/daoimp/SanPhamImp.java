@@ -1,7 +1,6 @@
 package com.quyvu.daoimp;
 
-import com.quyvu.entity.DanhMucSanPham;
-import com.quyvu.entity.SanPham;
+import com.quyvu.entity.*;
 
 import java.io.DataOutputStream;
 import java.util.ArrayList;
@@ -14,4 +13,6 @@ public interface SanPhamImp {
     DanhMucSanPham LayDanhMucSanPham(int madanhmuc);
     void XoaSanPham(int masanpham);
     int TongSoSanPhaM();
+    boolean ThemSanPham(SanPham sanPham);
+    boolean UpdateSanPham(SanPham sanPham);
 }

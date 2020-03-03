@@ -29,8 +29,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
     <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- lined-icons -->
-    <link rel="stylesheet" href="<c:url value="/resource/bootstrap-4.4.1/css/icon-font.min.css"/>" type='text/css' />
-    <jsp:include page="header.jsp"></jsp:include>
+    <link rel="stylesheet" href="<c:url value="/resource/Styles/style.css"/>" type='text/css' />
+    <link href="<c:url value="/resource/bootstrap-4.4.1/css/style.css"/>" rel='stylesheet' type='text/css' />
     <!-- //lined-icons -->
 </head>
 <body>
@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <tr>
                         <td>
                             <div>
-                                <input class="checkbox-all" type="checkbox">
+                                <input class="checkbox-all custom-checkbox" type="checkbox">
                             </div>
                         </td>
                         <td>Tên sản phẩm</td>
@@ -85,24 +85,71 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
             <div class="col-md-5 col-sm-12" style="margin-top: 20px">
-                <div class="form-group">
-                    <label>Tên sản phẩm: </label><input class="form-control" name="tensp" placeholder="Nhập tên sản phẩm"><br/>
-                    <label>Tên danh mục: </label>
-                    <select name="madanhmuc" class="form-control">
-                        <c:forEach var="danhmuc" items="${listdanhmucsanpham}">
-                            <option value="${danhmuc.madanhmuc}">${danhmuc.tendanhmuc}</option>
-                        </c:forEach>
-                    </select>
-                    <label>Giá tiền: </label><input class="form-control" name="giatien" placeholder="Nhập giá tiền"><br/>
-                    <label>Mô tả: </label><textarea class="form-control" name="mota" placeholder="Mô tả sản phẩm"></textarea><br/>
-                    <label>Hình sản phẩm: </label><input id="hinhanh" type="file" class="form-control" name="hinhanh" placeholder="Nhập giá tiền"><br/>
-                    <label>Dành cho Nam/Nữ: </label>
-                    <select name="danhcho" class="form-control">
-                        <option value="nam">Nam</option>
-                        <option value="nu">Nữ</option>
-                    </select>
+                <div class="form-group productDetail">
+                    <form style="margin-left: 15px">
+                        <label>Tên sản phẩm: </label><input class="form-control tensanpham" name="tensanpham" placeholder="Nhập tên sản phẩm"><br/>
+                        <label>Tên danh mục: </label>
+                        <select name="madanhmuc" class="form-control">
+                            <c:forEach var="danhmuc" items="${listdanhmucsanpham}">
+                                <option value="${danhmuc.madanhmuc}">${danhmuc.tendanhmuc}</option>
+                            </c:forEach>
+                        </select>
+                        <label>Giá tiền: </label><input class="form-control" name="giatien" placeholder="Nhập giá tiền"><br/>
+                        <label>Mô tả: </label><textarea class="form-control" name="mota" placeholder="Mô tả sản phẩm"></textarea><br/>
+                        <label>Hình sản phẩm: </label><input id="hinhanh" type="file" class="form-control" name="hinhsanpham" placeholder="Nhập giá tiền"><br/>
+                        <label>Dành cho Nam/Nữ: </label>
+                        <select name="danhcho" class="form-control">
+                            <option value="nam">Nam</option>
+                            <option value="nu">Nữ</option>
+                        </select>
+                    </form>
+                    
+                    <div class="row addProductDetail">
+                        <div id="clonechitietsanpham" class="col-md-10">
+                            <div class="col-md-10 themchitietsanpham" style="margin-top: 20px">
+                                <label>Chi Tiết</label><br/>
+                                <label>Kích thước</label>
+                                <select dataId="masize" class="form-control productSize">
+                                    <c:forEach var="listSize" items="${listSize}">
+                                        <option value="${listSize.masize}">${listSize.tenkichthuoc}</option>
+                                    </c:forEach>
+                                </select>
+                                <label>Màu sắc</label>
+                                <select dataId="mamau" class="form-control data-listMauSanPham productColor">
+                                    <c:forEach var="listMauSanPham" items="${listMauSanPham}">
+                                        <option value="${listMauSanPham.mamau}">${listMauSanPham.tenmau}</option>
+                                    </c:forEach>
+                                </select>
+                                <label>Số lượng</label>
+                                <input dataId="soluong" value="1" min="1" class="form-control productCount" type="number">
+                            </div>
+                        </div>
+                        <div id="themchitietsanpham" class="col-md-10 themchitietsanpham" style="margin-top: 20px">
+                            <label>Chi Tiết</label><br/>
+                            <label>Kích thước</label>
+                            <select dataId="masize" class="form-control productSize">
+                                <c:forEach var="listSize" items="${listSize}">
+                                    <option value="${listSize.masize}">${listSize.tenkichthuoc}</option>
+                                </c:forEach>
+                            </select>
+                            <label>Màu sắc</label>
+                            <select dataId="mamau" class="form-control productColor">
+                                <c:forEach var="listMauSanPham" items="${listMauSanPham}">
+                                    <option value="${listMauSanPham.mamau}">${listMauSanPham.tenmau}</option>
+                                </c:forEach>
+                            </select>
+                            <label>Số lượng</label>
+                            <input dataId="soluong" min="1" value="1" class="form-control productCount" type="number">
+
+                        </div>
+                        
+                        <div id="themchitiet" class="col-md-2 themchitiet" style="margin-top: 85px">
+                            <button class="btn btn-success btn-themchitiet">+</button>
+                        </div>
+                    </div>
+                    
                     <div style="text-align: center; margin-top: 30px">
-                        <a class="btn btn-success btn-add-product" style="margin-top: 20px;">THÊM SẢN PHẨM</a>
+                        <a id="btn-add-product" class="btn btn-success btn-add-product" style="margin-top: 20px;">THÊM SẢN PHẨM</a>
                     </div>
                 </div>
             </div>

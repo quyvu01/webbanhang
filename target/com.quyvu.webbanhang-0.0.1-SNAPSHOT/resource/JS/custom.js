@@ -170,6 +170,9 @@ $(document).ready(function () {
                 let tbodysanpham=$(".table-sanpham").find("tbody");
                 tbodysanpham.empty();
                 tbodysanpham.append(value);
+                tbodysanpham.find("tr").each(function () {
+                    $(this).addClass("perProduct");
+                })
             }
         })        
     });
@@ -224,7 +227,6 @@ $(document).ready(function () {
         let chitietclone=$("#themchitietsanpham").clone();
         chitietclone.removeAttr("id");
         $("#clonechitietsanpham").append(chitietclone);
-        
     });
     $("#btn-add-product").click(function (event) {
         event.preventDefault();
@@ -258,6 +260,53 @@ $(document).ready(function () {
             },
             success: function (value) {
                 
+            }
+        })
+    });
+    $(document).on('click',".perProduct", function () {
+        let dataId = $(this).attr('data-Id');
+        $(location).attr('href', './suasanpham/'+dataId);
+    })
+    $(".btn-delete-product").click(function () {
+        $(this).parent().remove();
+    });
+    $(".btn-save-product").click(function (event) {
+        event.preventDefault();
+        let dataId = $(this).attr('data-Id');
+        let productSerialize=$("form").serializeArray();
+        let json = {};
+        $.each(productSerialize, function(i, field){
+            json[field.name]=field.value;
+        });
+
+        let arrayDetail=[];
+
+        $(".themchitietsanpham").each(function () {
+            if($(this).attr('id')!="themchitietsanpham"){
+                let objecDetail={};
+                let productSize = $(this).find(".productSize").val();
+                let productColor = $(this).find(".productColor").val();
+                let productCount = $(this).find(".productCount").val();
+                let productDetail=$(this).attr("dataId");
+                objecDetail[$(this).find(".productSize").attr("dataId")]=productSize;
+                objecDetail[$(this).find(".productColor").attr("dataId")]=productColor;
+                objecDetail[$(this).find(".productCount").attr("dataId")]=productCount;
+                objecDetail["machitietsanpham"]=productDetail;
+                arrayDetail.push(objecDetail);
+            }
+        })
+        json["setChiTietSanPham"]=arrayDetail;
+        json["hinhsanpham"]=$("#img-product").attr('data-Id');
+        json["masanpham"]=dataId;
+        console.log(json);
+        $.ajax({
+            url:"/com_quyvu_webbanhang_war_exploded/suasanpham/api/"+dataId,
+            type:"POST",
+            data:{
+                dataJson:JSON.stringify(json)
+            },
+            success: function (value) {
+                $(location).attr('href',value)
             }
         })
     })

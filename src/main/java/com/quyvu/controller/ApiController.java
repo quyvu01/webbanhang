@@ -18,12 +18,8 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Stream;
 
 @Controller
 @RequestMapping("api/")
@@ -188,7 +184,7 @@ public class ApiController {
             return null;
         String checkbox="checkbox";
         for(SanPham sanPham:listSanPham){
-            html+="<tr><td><div><input value= '"+sanPham.getMasanpham()+"' type='"+checkbox+"'></div></td>";
+            html+="<tr data-Id='"+sanPham.getMasanpham()+"' style='cursor:pointer;'><td><div><input value= '"+sanPham.getMasanpham()+"' type='"+checkbox+"'></div></td>";
             html+="<td>"+sanPham.getTensanpham()+"</td>"+
                     "<td>"+sanPham.getGiatien()+"</td>"+
                     "<td>"+sanPham.getDanhcho()+"</td>";

@@ -22,7 +22,7 @@ public class SanPham {
         this.danhcho = danhcho;
     }
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="madanhmuc")
     DanhMucSanPham danhMucSanPham;
     

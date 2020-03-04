@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </thead>
                     <tbody>
                     <c:forEach var="danhsachsanpham" items="${danhsachsanpham}">
-                        <tr>
+                        <tr class="perProduct" data-Id="${danhsachsanpham.masanpham}" style="cursor:pointer;">
                             <td>
                                 <div>
                                     <input class="checkbox-item" type="checkbox" value="${danhsachsanpham.masanpham}">
@@ -107,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="row addProductDetail">
                         <div id="clonechitietsanpham" class="col-md-10">
                             <div class="col-md-10 themchitietsanpham" style="margin-top: 20px">
-                                <label>Chi Tiết</label><br/>
+                                <label style="font-weight: 500">Chi Tiết</label><button class="btn-delete-product">Xóa</button><br/>
                                 <label>Kích thước</label>
                                 <select dataId="masize" class="form-control productSize">
                                     <c:forEach var="listSize" items="${listSize}">
@@ -125,7 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                         <div id="themchitietsanpham" class="col-md-10 themchitietsanpham" style="margin-top: 20px">
-                            <label>Chi Tiết</label><br/>
+                            <label style="font-weight: 500">Chi Tiết</label><button class="btn-delete-product">Xóa</button><br/>
                             <label>Kích thước</label>
                             <select dataId="masize" class="form-control productSize">
                                 <c:forEach var="listSize" items="${listSize}">

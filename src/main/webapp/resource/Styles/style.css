@@ -418,4 +418,20 @@ html, body {
 	border: green !important;
 	border-radius: 10px !important;
 }
+
 /*end css ThemSanPham*/
+
+/*css UpdateSanPham*/
+.btn-delete-product{
+	border-radius: 10px;
+	margin-left: 15px;
+	background-color: #721c24;
+	color: white;
+	border: none;
+}
+.img-product-update{
+	width: 500px;
+	margin-top: 50px;
+	border-radius: 20px
+}
+/*end css UpdateSanPham*/
